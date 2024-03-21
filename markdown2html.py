@@ -1,4 +1,4 @@
-#/usr/bin/python3
+#!/usr/bin/python3
 import sys
 import markdown
 
@@ -16,9 +16,11 @@ def convert_markdown_to_html(input_file, output_file):
     with open(output_file, 'w') as f:
         f.write(html_text)
 
-if __name__=="__main__":
+
+if __name__ == "__main__":
     if len(sys.argv) < 3:
-        print("Usage: ./markdown2html.py <input_file> <output_file>", file=sys.stderr)
+        print("Usage: ./markdown2html.py <input_file> <output_file>",
+              file=sys.stderr)
         sys.exit(1)
 
     input_file = sys.argv[1]
